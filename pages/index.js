@@ -59,12 +59,11 @@ export default function App() {
 		let stock = useContext(stockContext);
 
 		return	(
-			<div className="col-md-4">
+			<div className="col-md-4" onClick={ ()=>{SendQuery(props.shoe)} }>
 				<img src={'https://codingapple1.github.io/shop/shoes'+ (props.i + 1) +'.jpg'} 
 					width="100%"
-					onClick={ ()=>{SendQuery(props.shoe)} }
 				/>
-				<h4 onClick={ ()=>{SendQuery(props.shoe)} }>{ props.shoe.title }</h4>
+				<h4>{ props.shoe.title }</h4>
 				<p>{ props.shoe.content }</p>
 				<Test i={props.i}/>
 			</div>
